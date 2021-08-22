@@ -64,6 +64,7 @@ def create_user(current_user):
     return jsonify({"message": "user created successful !"})
 
 
+
 @app.route('/users/<public_id>', methods=['GET'])
 def get_user(public_id):
     user = Users.query.filter_by(public_id=public_id).first()
